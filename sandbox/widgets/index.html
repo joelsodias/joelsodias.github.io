@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Gauge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    
+    <script src="widgets/WidgetsLib.js"></script>
+    
+    <!-- <link rel="stylesheet" href="NetrinWidgetGaugeMeter.css"> -->
+
+    <style>
+
+
+/* sm Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+.w-sm-100 { width: 100% }
+.w-sm-75 { width: 75% }
+.w-sm-50 { width: 50% }
+.w-sm-25 { width: 25% }
+
+}
+
+/* md Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+.w-md-100 { width: 100% }
+.w-md-75 { width: 75% }
+.w-md-50 { width: 50% }
+.w-md-25 { width: 25% }
+
+
+}
+
+/* lg Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+.w-lg-100 { width: 100% }
+.w-lg-75 { width: 75% }
+.w-lg-50 { width: 50% }
+.w-lg-25 { width: 25% }
+
+}
+
+/* xl X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+.w-xl-100 { width: 100% }
+.w-xl-75 { width: 75% }
+.w-xl-50 { width: 50% }
+.w-xl-25 { width: 25% }
+}
+
+/* xxl XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+.w-xxl-100 { width: 100% }
+.w-xxl-75 { width: 75% }
+.w-xxl-50 { width: 50% }
+.w-xxl-25 { width: 25% }
+}
+
+    </style>
+
+</head>
+
+<body>
+    <!-- <div class="wrapper">
+        <div id="gauge2" class="gauge-container two">
+             <span class="label">.two</span> 
+        </div>
+    </div> -->
+    <div class="container-fluid">
+        
+        <div class="row g-3 p-4">
+            <div class="col-12 col-sm-4">
+                <div class="border rounded p-3 h-100">
+                    <span class="fw-bold">Score <span class="d-none d-lg-inline-block">de crédito</span></span>
+                    <div class="" >    
+                        <div class="d-flex flex-column justify-content-center align-Conditions-center" >    
+                            <WidgetGaugeMeter class="w-100" value="401" max="1000" min="0" mask="0" anime>
+                                <Condition value="801" color="#5ee432" label="Score Muito Alto"></Condition>
+                                <Condition value="601" color="#5ee432" label="Score Alto"></Condition>
+                                <Condition value="401" color="#FFD700" label="Score Médio"></Condition>
+                                <Condition value="201" color="#f7aa38" label="Score Baixo"></Condition>
+                                <Condition value="0" color="#ef4655" label="Score Muito Baixo"></Condition>
+                                <placeholder></placeholder>
+                            </WidgetGaugeMeter>
+                            <WidgetTextSwitcher  value="401">
+                                <Condition value="801" color="#5ee432" label="Score Muito Alto"></Condition>
+                                <Condition value="601" color="#5ee432" label="Score Alto"></Condition>
+                                <Condition value="401" color="#FFD700" label="Score Médio"></Condition>
+                                <Condition value="201" color="#f7aa38" label="Score Baixo"></Condition>
+                                <Condition value="0" color="#ef4655" label="Score Muito Baixo"></Condition>
+                                <PlaceHolder class="d-flex justify-content-center"></PlaceHolder>
+                            </WidgetTextSwitcher>
+                        </div>
+                        <div class="w-100">
+                            <IconPlaceholder></IconPlaceholder>
+                            <WidgetTextSwitcher value="600" class="small">
+                                <Condition value="801" color="#999" label="Consumidores com esse perfil apresentam uma probabilidade de pagamento muito acima da media da população brasileira."></Condition>
+                                <Condition value="601" color="#999" label="Consumidores com esse perfil apresentam uma probabilidade de pagamento acima da média da população brasileira." ></Condition>
+                                <Condition value="401" color="#999" label="Consumidores com esse perfil apresentam uma probabilidade de pagamento na media da população brasileira."></Condition>
+                                <Condition value="201" color="#999" label="Consumidores com esse perfil apresentam uma probabilidade de pagamento abaixo da media da população brasileira."></Condition>
+                                <Condition value="0"   color="#999" label="Consumidores com esse perfil apresentam uma probabilidade de pagamento muito abaixo da media da população brasileira."></Condition>
+                                <PlaceHolder></PlaceHolder>
+                            </WidgetTextSwitcher>            
+                        </div>            
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-4">
+                <div class="border rounded p-3 h-100">
+                    <span class="fw-bold">Compromisso <span class="d-none d-lg-inline-block"> de pagamento</span></span>
+                    <div>
+                        <div class="d-flex flex-column justify-content-center align-Conditions-center" >    
+                            <WidgetGaugeMeter class="w-100"  value="60" max="100" min="0" mask="+%" anime>
+                                <Condition value="76" color="#5ee432" label="Excelente"/>
+                                <Condition value="51" color="#5ee432" label="Bom"/>
+                                <Condition value="26" color="#f7aa38" label="Ruim"/>
+                                <Condition value="0" color="#ef4655" label="Péssimo"/>
+                                <placeholder></placeholder>
+                            </WidgetGaugeMeter>
+                            <WidgetTextSwitcher value="60">
+                                <Condition value="76" color="#5ee432" label="Excelente"/>
+                                <Condition value="51" color="#5ee432" label="Bom"/>
+                                <Condition value="26" color="#f7aa38" label="Ruim"/>
+                                <Condition value="0" color="#ef4655" label="Péssimo"/>
+                                <PlaceHolder class="d-flex justify-content-center"></PlaceHolder>
+                            </WidgetTextSwitcher>
+                            <div class="w-100 small text-black-50">
+                                Consumidores com esse perfil possuem uma capacidade de pagamento de todas suas dívidas de {valor}%.
+                            </div>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-4">
+                <div class="border rounded p-3 h-100">
+                    <span class="fw-bold">Capacidade <span class="d-none d-lg-inline-block">de pagamento</span></span>
+                    <div class="d-flex flex-column justify-content-center align-Conditions-center" >    
+                        <WidgetGaugeMeter class=w-100" value="40" max="100" min="0" mask="%" anime>
+                            <Condition value="76" color="#5ee432" label="Excelente"/>
+                            <Condition value="51" color="#5ee432" label="Bom"/>
+                            <Condition value="26" color="#f7aa38" label="Ruim"/>
+                            <Condition value="0" color="#ef4655" label="Péssimo"/>
+                            <placeholder></placeholder>
+                        </WidgetGaugeMeter>
+                        <WidgetTextSwitcher value="40">
+                            <Condition value="76" color="#5ee432" label="Excelente"/>
+                            <Condition value="51" color="#5ee432" label="Bom"/>
+                            <Condition value="26" color="#f7aa38" label="Ruim"/>
+                            <Condition value="0" color="#ef4655" label="Péssimo"/>
+                            <PlaceHolder class="d-flex justify-content-center"></PlaceHolder>
+                        </WidgetTextSwitcher>
+                        <div class="w-100 small text-black-50">
+                            Consumidores com esse perfil possuem uma capacidade de pagamento de todas suas dívidas de {valor}%.
+                        </div>            
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <WidgetHorizontalMeter class="w-100" value="801" min="0" max="1000">
+            <Placeholder></Placeholder>
+            <div class="d-flex justify-content-around">
+                <Condition class="small" value="0" color="#ef4655" >
+                    <div class="text-center"><spam class="d-none d-md-inline-block">Risco</spam> Muito Alto</div>
+                    <div  class="text-center">0 a 200</div>
+                </Condition>
+                <Condition class="small" value="201" color="#f7aa38" >
+                    <div class="text-center"><spam class="d-none d-md-inline-block">Risco</spam> Alto</div>
+                    <div  class="text-center">201 a 400</div>
+                </Condition>
+                <Condition class="small" value="401" color="#FFD700" >
+                    <div class="text-center"><spam class="d-none d-md-inline-block">Risco</spam> Médio</div>
+                    <div  class="text-center">401 a 600</div>
+                </Condition>
+                <Condition class="small" value="601" color="#5ee432" >
+                    <div class="text-center"><spam class="d-none d-md-inline-block">Risco</spam> Baixo</div>
+                    <div  class="text-center">601 a 800</div>
+                </Condition>
+                <Condition class="small" value="801" color="#5ee432" >
+                    <div class="text-center"><spam class="d-none d-md-inline-block">Risco</spam> Muito Baixo</div>
+                    <div  class="text-center">801 a 1000</div>
+                </Condition>
+            </div>
+        </WidgetHorizontalMeter>
+
+    </div>
+        
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./widgets/LoadWidgets.js"></script>
+    <!-- <script src="./widgets/WidgetContentIf.js"></script> -->
+</body>
+
+</html>
